@@ -1,2 +1,9 @@
 ---
 services:
+  - name: repo-mirror.service
+    version: latest
+  - name: repo-mirror-sidekick.service
+    version: latest
+  - name: vulcan.service
+    version: latest
+
