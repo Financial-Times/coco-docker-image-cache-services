@@ -11,7 +11,7 @@ ExecStartPre=/bin/sh -c "docker pull registry:2"
 ExecStart=/bin/bash -c "\
   AWS_KEY=$(etcdctl get /ft/_credentials/aws/aws_access_key_id);\
   AWS_SECRET=$(etcdctl get /ft/_credentials/aws/aws_secret_access_key);\
-  docker run -p 80:80 --name %p \
+  docker run -p 80:5000 --name %p \
     -e SETTINGS_FLAVOR=s3 \
     -e AWS_BUCKET=coco-docker-registry \
     -e STORAGE_PATH=/registry \
