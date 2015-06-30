@@ -14,7 +14,7 @@ ExecStart=/bin/bash -c "\
     --env=\"SERVICE_FILES_URI=https://raw.githubusercontent.com/Financial-Times/coco-docker-image-cache-services/master/service-files/\" \
     --env=\"SERVICES_DEFINITION_FILE_URI=https://raw.githubusercontent.com/Financial-Times/coco-docker-image-cache-services/master/services.yaml\" \
     --env=\"INTERVAL_IN_SECONDS_BETWEEN_DEPLOYS=60\" \
-    --env=\"DESTROY=false\" \
+    --env=\"DESTROY=true\" \
     coco/coco-fleet-deployer"
 ExecStop=/usr/bin/docker stop -t 3 %p-%i
 
