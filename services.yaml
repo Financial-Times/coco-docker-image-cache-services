@@ -1,4 +1,4 @@
 ---
 services:
   - name: registry.service
-  - name: registry-sidekick.service
+  - name: registry-elb-presence.service
