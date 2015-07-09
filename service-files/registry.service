@@ -15,7 +15,7 @@ ExecStart=/bin/bash -c "\
     -e AWS_KEY=$AWS_KEY \
     -e AWS_SECRET=$AWS_SECRET \
     -e AWS_REGION=eu-west-1 \
-    coco/registry
+    coco/registry"
 ExecStopPost=-/usr/bin/docker rm -f %p
 Restart=on-failure
 RestartSec=30
