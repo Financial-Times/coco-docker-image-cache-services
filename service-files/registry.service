@@ -7,7 +7,7 @@ After=docker.socket
 TimeoutStartSec=600
 ExecStartPre=-/usr/bin/docker kill %p
 ExecStartPre=-/usr/bin/docker rm %p
-ExecStartPre=/bin/sh -c "docker pull registry:2"
+ExecStartPre=/bin/sh -c "docker pull coco/coco-registry"
 ExecStart=/bin/bash -c "\
   AWS_KEY=$(etcdctl get /ft/_credentials/aws/aws_access_key_id);\
   AWS_SECRET=$(etcdctl get /ft/_credentials/aws/aws_secret_access_key);\
@@ -15,7 +15,7 @@ ExecStart=/bin/bash -c "\
     -e AWS_KEY=$AWS_KEY \
     -e AWS_SECRET=$AWS_SECRET \
     -e AWS_REGION=eu-west-1 \
-    coco/registry"
+    coco/coco-registry"
 ExecStopPost=-/usr/bin/docker rm -f %p
 Restart=on-failure
 RestartSec=30
