@@ -4,13 +4,14 @@ Requires=docker.service
 After=docker.service
 
 [Service]
-ExecStartPre=-/usr/bin/docker kill registry-elb-presence
-ExecStartPre=-/usr/bin/docker rm registry-elb-presence
+ExecStartPre=-/usr/bin/docker kill %p
+ExecStartPre=-/usr/bin/docker rm %p
 ExecStart=/bin/sh -c '\
   AWS_ACCESS_KEY=$(/usr/bin/etcdctl get /ft/_credentials/aws/aws_access_key_id); \
   AWS_SECRET_KEY=$(/usr/bin/etcdctl get /ft/_credentials/aws/aws_secret_access_key); \
-  /usr/bin/docker run --rm --name registry-elb-presence -e AWS_ACCESS_KEY=$AWS_ACCESS_KEY -e AWS_SECRET_KEY=$AWS_SECRET_KEY -e AWS_REGION=eu-west-1 -e ELB_NAME=registry-elb quay.io/coreos/elb-presence'
-ExecStop=/usr/bin/docker stop registry-elb-presence
+  ELB_NAME=$(etcdctl get /ft/_credentials/elb_name); \
+  /usr/bin/docker run --rm --name %p -e AWS_ACCESS_KEY=$AWS_ACCESS_KEY -e AWS_SECRET_KEY=$AWS_SECRET_KEY -e AWS_REGION=eu-west-1 -e ELB_NAME=$ELB_NAME quay.io/coreos/elb-presence'
+ExecStop=/usr/bin/docker stop %p
 
 [X-Fleet]
 MachineOf=registry.service
