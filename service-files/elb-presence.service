@@ -1,5 +1,5 @@
 [Unit]
-Description=Register registry instance with the cluster ELB
+Description=Register vulcan instances with the cluster ELB
 Requires=docker.service
 After=docker.service
 
@@ -14,4 +14,4 @@ ExecStart=/bin/sh -c '\
 ExecStop=/usr/bin/docker stop %p
 
 [X-Fleet]
-MachineOf=registry.service
+Global=true
