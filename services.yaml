@@ -1,4 +1,8 @@
 ---
 services:
   - name: registry.service
-  - name: registry-elb-presence.service
+  - name: elb-presence.service
+  - name: deployer.service
+  - name: deployer.timer
+  - name: splunk-forwarder.service
+
