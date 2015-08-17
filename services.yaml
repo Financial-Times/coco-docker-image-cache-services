@@ -1,8 +1,9 @@
 ---
 services:
   - name: registry.service
+    uri: https://raw.githubusercontent.com/Financial-Times/coco-docker-image-cache-services/master/service-files/registry.service
   - name: elb-presence.service
-  - name: deployer.service
-  - name: deployer.timer
+    uri: https://raw.githubusercontent.com/Financial-Times/coco-docker-image-cache-services/master/service-files/elb-presence.service
   - name: splunk-forwarder.service
+    uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/service-files/splunk-forwarder.service
 
