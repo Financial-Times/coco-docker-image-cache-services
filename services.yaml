@@ -6,4 +6,6 @@ services:
     uri: https://raw.githubusercontent.com/Financial-Times/coco-docker-image-cache-services/master/service-files/elb-presence.service
   - name: splunk-forwarder.service
     uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/service-files/splunk-forwarder.service
+  - name: registry-proxy.service
+    uri: https://raw.githubusercontent.com/Financial-Times/up-registry-proxy/master/registry-proxy.service
 
