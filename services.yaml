@@ -23,4 +23,4 @@ services:
     uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/service-files/aggregate-healthcheck-sidekick@.service
     count: 1
   - name: vulcan.service
-    uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/service-files/vulcan.service
+    uri: https://raw.githubusercontent.com/Financial-Times/fleet/etcd1/service-files/vulcan.service
