@@ -24,3 +24,7 @@ services:
     count: 1
   - name: vulcan.service
     uri: https://raw.githubusercontent.com/Financial-Times/fleet/etcd1/service-files/vulcan.service
+  - name: image-cleaner.service
+    uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/service-files/image-cleaner.service
+  - name: image-cleaner.timer
+    uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/service-files/image-cleaner.timer
