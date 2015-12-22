@@ -16,6 +16,6 @@ services:
   - name: aggregate-healthcheck@.service
     count: 1
   - name: vulcan.service
-    uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/service-files/vulcan.service
+    uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/vulcan.service
   - name: image-cleaner.service
     uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/image-cleaner.service
