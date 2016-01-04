@@ -14,6 +14,10 @@ services:
   - name: fleet-unit-healthcheck-sidekick.service
     uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/fleet-unit-healthcheck-sidekick.service
   - name: aggregate-healthcheck@.service
+    uri: https://raw.githubusercontent.com/Financial-Times/up-service-files/master/aggregate-healthcheck@.service
+    count: 1
+  - name: aggregate-healthcheck-sidekick@.service
+    uri: https://raw.githubusercontent.com/Financial-Times/up-service-files/master/aggregate-healthcheck-sidekick@.service
     count: 1
   - name: vulcan.service
     uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/vulcan.service
