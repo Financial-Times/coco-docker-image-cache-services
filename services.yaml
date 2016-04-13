@@ -2,25 +2,25 @@
 services:
   - name: registry.service
   - name: elb-presence@.service
-    uri: https://raw.githubusercontent.com/Financial-Times/up-service-files/master/elb-presence@.service
+    uri: https://raw.githubusercontent.com/Financial-Times/up-service-files/prod-registry/elb-presence@.service
     count: 1
   - name: splunk-forwarder.service
-    uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/splunk-forwarder.service
+    uri: https://raw.githubusercontent.com/Financial-Times/fleet/prod-registry/splunk-forwarder.service
   - name: system-healthcheck.service
-    uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/system-healthcheck.service
+    uri: https://raw.githubusercontent.com/Financial-Times/fleet/prod-registry/system-healthcheck.service
   - name: system-healthcheck-sidekick.service
-    uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/system-healthcheck-sidekick.service
+    uri: https://raw.githubusercontent.com/Financial-Times/fleet/prod-registry/system-healthcheck-sidekick.service
   - name: fleet-unit-healthcheck.service
-    uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/fleet-unit-healthcheck.service
+    uri: https://raw.githubusercontent.com/Financial-Times/fleet/prod-registry/fleet-unit-healthcheck.service
   - name: fleet-unit-healthcheck-sidekick.service
-    uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/fleet-unit-healthcheck-sidekick.service
+    uri: https://raw.githubusercontent.com/Financial-Times/fleet/prod-registry/fleet-unit-healthcheck-sidekick.service
   - name: aggregate-healthcheck@.service
-    uri: https://raw.githubusercontent.com/Financial-Times/up-service-files/master/aggregate-healthcheck@.service
+    uri: https://raw.githubusercontent.com/Financial-Times/up-service-files/prod-registry/aggregate-healthcheck@.service
     count: 1
   - name: aggregate-healthcheck-sidekick@.service
-    uri: https://raw.githubusercontent.com/Financial-Times/up-service-files/master/aggregate-healthcheck-sidekick@.service
+    uri: https://raw.githubusercontent.com/Financial-Times/up-service-files/prod-registry/aggregate-healthcheck-sidekick@.service
     count: 1
   - name: vulcan.service
-    uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/vulcan.service
+    uri: https://raw.githubusercontent.com/Financial-Times/fleet/prod-registry/vulcan.service
   - name: image-cleaner.service
-    uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/image-cleaner.service
+    uri: https://raw.githubusercontent.com/Financial-Times/fleet/prod-registry/image-cleaner.service
