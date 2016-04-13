@@ -3,6 +3,7 @@ services:
   - name: registry.service
   - name: elb-presence@.service
     uri: https://raw.githubusercontent.com/Financial-Times/up-service-files/master/elb-presence@.service
+    count: 1
   - name: splunk-forwarder.service
     uri: https://raw.githubusercontent.com/Financial-Times/fleet/master/splunk-forwarder.service
   - name: system-healthcheck.service
